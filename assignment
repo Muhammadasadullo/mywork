@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cloud Website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 { color: #4a90e2; margin-bottom: 10px; }
+        p { font-size: 1.1rem; color: #666; }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #4a90e2;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: scale(1.05); background: #357abd; }
+        .status-box {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            padding: 10px;
+            background: #f0f4f8;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>☁️ Cloud Site</h1>
+        <p>This website was built in Visual Studio and is ready for GitHub Hosting.</p>
+        
+        <div class="status-box">
+            <strong>Status:</strong> <span id="status">Online</span><br>
+            <strong>Last Updated:</strong> <span id="date"></span>
+        </div>
+
+        <a href="https://github.com" class="btn">View on GitHub</a>
+    </div>
+
+    <script>
+        // Simple JS to show the current date
+        document.getElementById('date').innerText = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
